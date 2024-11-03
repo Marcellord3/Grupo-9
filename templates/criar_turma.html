@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Turma</title>
+</head>
+<body>
+    <h1>Adicionar Nova Turma</h1>
+    <form action="/turmas" method="POST">
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" name="descricao" required><br>
+
+        <label for="professor_id">ID do Professor:</label>
+        <input type="number" id="professor_id" name="professor_id" required><br>
+
+        <label for="ativo">Ativo:</label>
+        <input type="checkbox" id="ativo" name="ativo" checked><br>
+
+        <button type="submit">Adicionar</button>
+    </form>
+    <a href="/">Voltar</a>
+</body>
+</html>

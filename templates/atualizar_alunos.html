@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Aluno</title>
+</head>
+<body>
+    <h1>Atualizar Aluno</h1>
+    <form action="/alunos/{{ aluno.id }}" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" value="{{ aluno.nome }}" required><br>
+
+        <label for="turma_id">ID da Turma:</label>
+        <input type="number" id="turma_id" name="turma_id" value="{{ aluno.turma_id }}" required><br>
+
+        <label for="data_nascimento">Data de Nascimento:</label>
+        <input type="text" id="data_nascimento" name="data_nascimento" value="{{ aluno.data_nascimento }}" placeholder="dd/mm/aaaa" required><br>
+
+        <label for="nota_primeiro_semestre">Nota Primeiro Semestre:</label>
+        <input type="number" step="0.1" id="nota_primeiro_semestre" name="nota_primeiro_semestre" value="{{ aluno.nota_primeiro_semestre }}"><br>
+
+        <label for="nota_segundo_semestre">Nota Segundo Semestre:</label>
+        <input type="number" step="0.1" id="nota_segundo_semestre" name="nota_segundo_semestre" value="{{ aluno.nota_segundo_semestre }}"><br>
+
+        <button type="submit">Salvar Alterações</button>
+    </form>
+    <a href="/">Voltar</a>
+</body>
+</html>
